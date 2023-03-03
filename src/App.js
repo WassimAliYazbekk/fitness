@@ -1,12 +1,12 @@
 import './App.css';
-import Header from './Components/Header';
-import HeroBanner from './Components/HeroBanner';
+import {Header, HeroBanner} from './Components';
 
 function App() {
   return (
     <div>
         <Header/>
         <HeroBanner/>
+        <div style={{height: '1000px'}}></div>
     </div>
   );
 }
