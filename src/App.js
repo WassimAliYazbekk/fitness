@@ -1,12 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import {Header, HeroBanner} from './Components';
+import {Header, Footer} from './Components';
+import {IndexPage, Home, Profile} from './Pages'
 
 function App() {
   return (
-    <div>
+    <div className=' min-h-full'>
         <Header/>
-        <HeroBanner/>
-        <div style={{height: '1000px'}}></div>
+        <Routes>
+          <Route path='/' element={<IndexPage/>}/>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/me' element={<Profile/>} />
+        </Routes>
+        <Footer/>
     </div>
   );
 }
